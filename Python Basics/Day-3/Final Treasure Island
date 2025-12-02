@@ -1,0 +1,20 @@
+print("welcome to the treauser island, your mission is to find treasure")
+
+choice1 = input("You are at corssroad which direction will you chose(Left/Right): ").lower()
+
+if choice1 == 'left':
+    print("You crossed a road succsefully! \n # Level 1 completed")
+    choice2 = input("there is a boat to cross river will you go by (swim or wait)?:").lower()
+    if choice2 == 'wait':
+        print("You are arived on island unharm ! \n # Level 2 completed")
+        choice3 = input("there is door with (Red Green Blue) colours which one will you chose to find treasure?: ").lower()
+        if choice3 == "red":
+            print("Congratulations You got treauser! \n  # You win")
+        elif choice3 == "green":
+            print("You enterd in room full of fire! \n  # Game Over")
+        elif choice3  == "blue":
+            print("You entred in room of HoneyBees!\n  # GAME over")
+    else:
+        print("You got attacked by shark, \n # Game OVER")
+else:
+    print("You chosed Wrong path.\n  # Game Over")    
