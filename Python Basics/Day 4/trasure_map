@@ -1,0 +1,14 @@
+row1 = ["✔️", "✔️", "✔️"]
+row2 = ["✔️", "✔️", "✔️"]
+row3 = ["✔️", "✔️", "✔️"]
+print(f"{row1}\n{row2}\n{row3}\n")
+
+map = [row1,row2 , row3]
+position = (input("enter pos:"))
+
+h_pos =int(str(position[0]))#row  
+v_pos = int(str(position[1]))#col 
+
+map[h_pos -1 ][v_pos-1] = "X"
+
+print(f"{row1}\n{row2}\n{row3}\n")
