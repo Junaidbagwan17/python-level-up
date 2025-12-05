@@ -1,0 +1,47 @@
+print("heloo")
+print(len("hello"))
+
+# def my_function():
+#     print("helllo")
+    
+# my_function()
+
+
+
+# for iten in list_of:
+#     #do something with each item
+    
+# for num in range(a,b):
+#     print(num)
+    
+    
+#while LOOP
+# while something_is_true:
+#     #do someting repeatdly
+
+# number= 6
+# while number > 0:
+#     jump()
+#     number -=1
+#     print(number)
+
+# for n in range(1,6):
+#     jump()
+    
+    
+
+# while at_goal != True:
+#     jump()
+
+# while not at_goal :
+#     jump()
+
+
+# while not at_goal():
+#         if wall_in_front():
+#             jump()
+#         else:
+#             move()
+            
+            
+            
