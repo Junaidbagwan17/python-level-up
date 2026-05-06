@@ -28,8 +28,9 @@ to_replace = "[NAME]"
 letter_to_sent = content.replace(to_replace, person_name)
 print(letter_to_sent)
 
-email = "ml.technologia2026@gmail.com"
-password = "bhjf dtsl ieaj xgyx"
+# Get email credentials from GitHub Secrets
+email = os.environ.get("EMAIL")
+password = os.environ.get("PASSWORD")
 
 with smtplib.SMTP("smtp.gmail.com", 587) as connection:
     connection.starttls()
