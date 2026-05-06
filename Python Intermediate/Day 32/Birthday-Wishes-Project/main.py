@@ -4,40 +4,62 @@ import random
 import datetime as dt
 import os
 
+# Get today's date
 now = dt.datetime.now()
-year = now.year
-today_month =  now.month
+today_month = now.month
 today_day = now.day
 
-data = pandas.read_csv("birthdays.csv")
-
-# loop through each row of the csv file
-for index, row in data.iterrows():
-    # check if today's month and day # matches birthday month and birthday day
-    if row["day"]==today_day and row["month"] == today_month:
-        person_name = row["name"]
-        person_email = row["email"]
-
-letter_digit = random.randint(1,3)
-selected_letter = f"letter{letter_digit}.txt"
-
-with open(selected_letter, "r") as letter_file:
-    content = letter_file.read()
-    # print(content)
-
-to_replace = "[NAME]"
-letter_to_sent = content.replace(to_replace, person_name)
-print(letter_to_sent)
-
-# Get email credentials from GitHub Secrets
-
+# Get GitHub secrets
 email = os.environ.get("EMAIL")
 password = os.environ.get("PASSWORD")
 
+# Read CSV file
+data = pandas.read_csv("birthdays.csv")
 
-with smtplib.SMTP("smtp.gmail.com", 587) as connection:
-    connection.starttls()
-    connection.login(user=email, password=password)
-    connection.sendmail(from_addr=email, to_addrs=person_email,
-                        msg=f"Subject:Happy Birthday 🎉\n\n{letter_to_sent}".encode("utf-8"))
-    print("mailsend")
+# Default values
+person_name = None
+person_email = None
+
+# Check birthdays
+for index, row in data.iterrows():
+
+    if row["day"] == today_day and row["month"] == today_month:
+        person_name = row["name"]
+        person_email = row["email"]
+
+# Send email only if birthday found
+if person_name is not None:
+
+    # Choose random letter
+    letter_digit = random.randint(1, 3)
+    selected_letter = f"letter{letter_digit}.txt"
+
+    # Read letter
+    with open(selected_letter, "r") as letter_file:
+        content = letter_file.read()
+
+    # Replace placeholder
+    letter_to_send = content.replace("[NAME]", person_name)
+
+    print(letter_to_send)
+
+    # Send email
+    with smtplib.SMTP("smtp.gmail.com", 587) as connection:
+
+        connection.starttls()
+
+        connection.login(
+            user=email,
+            password=password
+        )
+
+        connection.sendmail(
+            from_addr=email,
+            to_addrs=person_email,
+            msg=f"Subject:Happy Birthday 🎉\n\n{letter_to_send}".encode("utf-8")
+        )
+
+    print("Birthday email sent successfully 🚀")
+
+else:
+    print("No birthdays today")
