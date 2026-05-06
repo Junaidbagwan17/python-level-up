@@ -47,6 +47,8 @@ if person_name is not None:
     with smtplib.SMTP("smtp.gmail.com", 587) as connection:
 
         connection.starttls()
+        print(email)
+        print(password)
 
         connection.login(
             user=email,
