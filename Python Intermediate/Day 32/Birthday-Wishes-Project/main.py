@@ -30,8 +30,10 @@ letter_to_sent = content.replace(to_replace, person_name)
 print(letter_to_sent)
 
 # Get email credentials from GitHub Secrets
+
 email = os.environ.get("EMAIL")
 password = os.environ.get("PASSWORD")
+
 
 with smtplib.SMTP("smtp.gmail.com", 587) as connection:
     connection.starttls()
