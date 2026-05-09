@@ -28,4 +28,4 @@ jobs:
           EMAIL: ${{ secrets.EMAIL }}
           PASSWORD: ${{ secrets.PASSWORD }}
           API_KEY: ${{ secrets.API_KEY }}
-        run: python weather_alert.py
+        run: python "Python Intermediate/Day 35/rain-forcast.py"
