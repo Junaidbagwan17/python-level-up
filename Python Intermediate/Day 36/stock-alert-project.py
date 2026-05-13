@@ -48,8 +48,7 @@ def is_significant_change(stock_price):
 
 # ------------------- FETCH NEWS DATA ---------------------
 def fetch_news_data():
-    NEWS_Endpoint = "https://newsapi.org/v2/everything"  # ?q=tesla&sortBy=publishedAt&apiKey=2be717943a7f452b835b8a8204f4d40b
-    NEWS_API_KEY = "YOUR API KEY HERE ALSO"
+    NEWS_Endpoint = "https://newsapi.org/v2/everything"  # ?q=tesla&sortBy=publishedAt&apiKey=YOUR APIKEY
     news_parameters = {"q": "tesla",
                        "language": "en",
                        "sortBy": "publishedAt",
