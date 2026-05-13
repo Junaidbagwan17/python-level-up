@@ -6,7 +6,7 @@ from datetime import time
 AV_Endpoint = "https://www.alphavantage.co/query"
 parameters = {"function": "TIME_SERIES_DAILY",
               "symbol": "TSLA",
-              "apikey": "02BNS6UMGNHD9WQI"
+              "apikey": "YOUR API KEY"
               }
 response = requests.get(AV_Endpoint, params=parameters)
 print(response.raise_for_status())
@@ -49,7 +49,7 @@ def is_significant_change(stock_price):
 # ------------------- FETCH NEWS DATA ---------------------
 def fetch_news_data():
     NEWS_Endpoint = "https://newsapi.org/v2/everything"  # ?q=tesla&sortBy=publishedAt&apiKey=2be717943a7f452b835b8a8204f4d40b
-    NEWS_API_KEY = "2be717943a7f452b835b8a8204f4d40b"
+    NEWS_API_KEY = "YOUR API KEY HERE ALSO"
     news_parameters = {"q": "tesla",
                        "language": "en",
                        "sortBy": "publishedAt",
@@ -79,8 +79,8 @@ def extract_news_articles():
 def monitor_stock():
 
     def send_telegram_message(message):
-        BOT_TOKEN = "8834938535:AAHRXKiLecPlxScReSr1BqPHSfEzcGG2fgg"
-        CHAT_ID = "1439202338"
+        BOT_TOKEN = "BOT FATHER TOKEN for your id"
+        CHAT_ID = "YOUR CHAT ID FROM get/updates website"
         telegram_endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
         telegram_parameters = {
             "chat_id": CHAT_ID,
