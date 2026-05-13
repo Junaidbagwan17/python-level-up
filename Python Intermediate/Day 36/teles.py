@@ -3,8 +3,8 @@ import requests
 
 def send_telegram_message(message):
 
-    BOT_TOKEN = "8834938535:AAHRXKiLecPlxScReSr1BqPHSfEzcGG2fgg"
-    CHAT_ID = "1439202338"
+    BOT_TOKEN = "your number:tokem"
+    CHAT_ID = "chat id from get/updates website"
 
     telegram_endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendMessage"
 
@@ -22,4 +22,4 @@ def send_telegram_message(message):
 
 
 # Example Test
-send_telegram_message("🚀 Test message from Python bot!")
+send_telegram_message("Test message from Python bot!")
