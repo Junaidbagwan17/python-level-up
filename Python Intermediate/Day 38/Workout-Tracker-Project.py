@@ -3,7 +3,7 @@ import requests
 from datetime import datetime
 
 # API key automatically comes from GEMINI_API_KEY
-client = genai.Client(api_key="AIzaSyCcsSnXCQRaAFuiBdD_5UYPLq8TbyV3gYA")
+client = genai.Client(api_key="YOUR API KEY")
 
 user_input = input("Tell me about your workout: ")
 
@@ -27,7 +27,7 @@ today_workout = response.text.split("\n")
 # -----------------------------------------------------------------------------
 
 # open sheety get login with same opend file to that app and then get api key
-SHEETY_Endpoint = "https://api.sheety.co/4b5e176d3148cc5fcc899a3cb6b134fa/workoutTracking/workouts"
+SHEETY_Endpoint = "https://api.sheety.co/YOUR API KEY/workoutTracking/workouts"
 
 # 2. Get Current Date and Time
 today_date = datetime.now().strftime("%d/%m/%Y")
