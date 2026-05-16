@@ -34,3 +34,5 @@ Cheap Flight Finder
 ├── flight_search.py
 ├── flight_data.py
 └── notification_manager.py
+
+<img width="1110" height="605" alt="image" src="https://github.com/user-attachments/assets/56ee11f2-84ec-4a01-92e6-e38f20046785" />
