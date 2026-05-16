@@ -8,4 +8,3 @@ class DataManager:
         response = requests.get(url=self.SHEETY_Endpoint)
         data = response.json()
         return data["prices"]
-
