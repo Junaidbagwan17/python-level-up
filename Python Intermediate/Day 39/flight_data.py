@@ -1,7 +1,5 @@
-
 from data_mangager import DataManager
 data_manager = DataManager()
-
 
 class FlightData:
 
