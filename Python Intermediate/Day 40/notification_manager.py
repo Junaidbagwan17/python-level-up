@@ -3,8 +3,8 @@ import  smtplib
 
 from proto.marshal.compat import message
 
-BOT_TOKEN ="8675380241:AAH01PZ9vmeY5ubtyI1qitlr3u-78cXeBvQ" #"8834938535:AAHRXKiLecPlxScReSr1BqPHSfEzcGG2fgg"
-CHAT_ID = "1439202338"         #https://api.telegram.org/bot12345:ABCXYZ/getUpdates
+BOT_TOKEN ="YOUR TOKEN
+CHAT_ID = "YOUR CHAT ID FROM GET UPDATES URL"         #https://api.telegram.org/bot12345:ABCXYZ/getUpdates
 
 class NotificationManager:
     def send_message(self, message):
