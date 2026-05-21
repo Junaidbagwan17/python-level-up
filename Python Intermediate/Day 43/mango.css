@@ -1,0 +1,30 @@
+/** ----------------------- TAG SELECTOR --------------------------**/
+h1{
+    color: green;
+    font-size: 100px;
+}
+
+/*here :hover is pseudo-class*/
+img:hover{
+    background-color: yellow;
+}
+
+/** ------------------------- CLASS SELECTOR -----------------------**/
+/*You can Use class selector with duplicated name like heading two times but
+you cant have spaces if space is there that is considerd as next class*/
+
+.bitter{
+    background-color: red;
+}
+.mango{
+    background-color: green;
+}
+.border{
+    border-radius: 100%;
+}
+/*------------------------- ID SELECTORS -----------------------------*/
+/*IN ID class you cant have same id used */
+
+#heading{
+    color: blueviolet;
+}
